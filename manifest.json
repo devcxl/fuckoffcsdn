@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Fuckoffcsdn",
+  "version": "1.0",
+  "description": "Fuckoffcsdn",
+  "permissions": ["scripting", "tabs"],
+  "host_permissions": [
+    "*://www.google.com/*",
+    "*://www.google.com.hk/*",
+    "*://www.bing.com/*",
+    "*://duckduckgo.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.google.com/*",
+        "*://www.google.com.hk/*",
+        "*://www.bing.com/*",
+        "*://duckduckgo.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "48": "icons/logo.png"
+  }
+}
